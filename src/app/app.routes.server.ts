@@ -1,20 +1,8 @@
 import { RenderMode, ServerRoute } from '@angular/ssr';
 
 export const serverRoutes: ServerRoute[] = [
-  {
-    path: '',              // Ruta principal prerenderizada
-    renderMode: RenderMode.Prerender
-  },
-  {
-    path: 'productos',     // Lista general de productos prerenderizada
-    renderMode: RenderMode.Prerender
-  },
-  {
-    path: 'productos',  // Rutas con parámetro se renderizan en cliente
-    renderMode: RenderMode.Prerender
-  },
-  {
-    path: 'contacto',      // Contacto prerenderizado
-    renderMode: RenderMode.Prerender
-  }
+  { path: '', renderMode: RenderMode.Prerender },
+  { path: 'productos', renderMode: RenderMode.Client }, // rutas dinámicas van por CSR
+  { path: 'contacto', renderMode: RenderMode.Prerender },
+  { path: '**', renderMode: RenderMode.Client } // fallback para rutas desconocidas
 ];
