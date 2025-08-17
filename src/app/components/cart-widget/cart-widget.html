@@ -1,0 +1,37 @@
+<div class="fixed bottom-6 right-6 z-50">
+  <button
+    (click)="toggleCart()"
+    class="bg-palette2-medium text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg relative"
+  >
+    🛒 @if (cartCount > 0) {
+
+    <span class="absolute -top-1 -right-1 bg-red-500 text-xs text-white w-5 h-5 rounded-full flex items-center justify-center">
+      {{ cartCount }}
+    </span>
+    }
+  </button>
+</div>
+
+<!-- Panel carrito -->
+@if (isOpen) {
+<div class="fixed bottom-24 right-6 w-72 bg-white shadow-2xl rounded-xl p-4 z-50 border">
+  <h3 class="text-palette2-medium font-bold font-bold mb-2">Carrito</h3>
+  @if (cart.length === 0) {
+  <div class="text-gray-500">Vacío</div>
+  } @for (item of cart; track $index; let i = $index) {
+  <div class="flex justify-between items-center border-b py-1">
+    <span class="text-palette2-medium">{{ item.producto.nombre }}</span>
+    <span class="text-palette2-blue">{{ item.cantidad }}</span>
+    <button class="text-red-500 text-sm" (click)="remove(item.producto.id)">✕</button>
+  </div>
+
+  } @if (cart.length > 0) {
+  <button
+    (click)="finalizarCompra()"
+    class="w-full mt-3 text-palette2-medium font-bold text-palette2-medium hover:font-bold py-2 rounded-lg hover:bg-palette1-light"
+  >
+    Finalizar en WhatsApp
+  </button>
+  }
+</div>
+}

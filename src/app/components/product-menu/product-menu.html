@@ -1,0 +1,53 @@
+<div class="relative p-4">
+  <!-- Flecha Izquierda -->
+  <button
+    (click)="prev()"
+    [disabled]="current === 0"
+    class="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full p-2 bg-palette2-medium text-white shadow disabled:opacity-40 disabled:cursor-not-allowed"
+    aria-label="Anterior"
+  >
+    ‹
+  </button>
+
+  <!-- Ventana -->
+  <div
+    class="overflow-hidden rounded-2xl"
+    (touchstart)="onTouchStart($event)"
+    (touchend)="onTouchEnd($event)"
+  >
+    <!-- Pista -->
+    <div class="flex transition-transform duration-300 ease-out" [style.transform]="translatePct">
+      @for (category of categories; track category.id) {
+      <div
+        class="shrink-0 px-3"
+        [ngClass]="{
+          'basis-full': slidesPerView === 1,
+          'basis-1/2': slidesPerView === 2,
+          'basis-1/3': slidesPerView === 3
+        }"
+      >
+        <a
+          [href]="'/productos/' + category.id"
+          class="block h-full cursor-pointer rounded-2xl p-6 text-center shadow-md bg-palette1-medium hover:bg-palette2-light hover:scale-[1.02] transition-transform duration-300"
+          (click)="seleccionar(category.id)"
+        >
+          <div class="text-4xl mb-3">{{ category.icon }}</div>
+          <p class="font-quicksand font-semibold text-lg text-palette2-medium">
+            {{ category.name }}
+          </p>
+        </a>
+      </div>
+      }
+    </div>
+  </div>
+
+  <!-- Flecha Derecha -->
+  <button
+    (click)="next()"
+    [disabled]="current >= categories.length - slidesPerView"
+    class="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full p-2 bg-palette2-medium text-white shadow disabled:opacity-40 disabled:cursor-not-allowed"
+    aria-label="Siguiente"
+  >
+    ›
+  </button>
+</div>

@@ -1,0 +1,33 @@
+<nav class="bg-palette1-light shadow-md font-quicksand">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <div class="flex-shrink-0 text-palette2-medium font-bold text-xl">Mia Crochet</div>
+
+      <!-- Menú Desktop -->
+      <div class="hidden md:flex space-x-6">
+        <a href="#" class="text-palette2-medium hover:font-bold transition">Inicio</a>
+        <a href="/productos" class="text-palette2-medium hover:font-bold transition">Productos</a>
+        <!-- <a href="/contacto" class="text-palette2-medium hover:font-bold transition">Contacto</a> -->
+      </div>
+
+      <!-- Botón Mobile -->
+      <div class="md:hidden">
+        <button
+          (click)="toggleMenu()"
+          class="text-palette2-medium hover:text-palette1-dark focus:outline-none"
+        >
+          ☰
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menú Mobile -->
+  @if (isMenuOpen) {
+  <div class="md:hidden bg-palette1-light px-4 py-2 space-y-2">
+    <a href="#" class="block text-palette2-medium hover:text-palette1-dark">Inicio</a>
+    <a href="/productos" class="block text-palette2-medium hover:text-palette1-dark">Productos</a>
+    <!-- <a href="/contacto" class="block text-palette2-medium hover:text-palette1-dark">Contacto</a> -->
+  </div>
+  }
+</nav>
