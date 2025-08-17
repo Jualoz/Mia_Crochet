@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/Mia_Crochet/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
