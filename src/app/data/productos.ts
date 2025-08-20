@@ -27,7 +27,7 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'Producto 2',
     descripcion: 'Descripción del producto 2',
     precio: 0,
-    imagen: 'assets/img/IMG-20250819-WA0052.jpg',
+    imagen: '../../assets/img/IMG-20250819-WA0052.jpg',
     categoriaId: [CATEGORIES[0].id],
   },
   {
@@ -35,7 +35,7 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'Producto 3',
     descripcion: 'Descripción del producto 3',
     precio: 0,
-    imagen: 'assets/img/IMG-20250819-WA0053.jpg',
+    imagen: '../../assets/img/IMG-20250819-WA0053.jpg',
     categoriaId: [CATEGORIES[0].id],
   },
   {
@@ -43,7 +43,7 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'Producto 4',
     descripcion: 'Descripción del producto 4',
     precio: 0,
-    imagen: 'assets/img/IMG-20250819-WA0054.jpg',
+    imagen: '../../assets/img/IMG-20250819-WA0054.jpg',
     categoriaId: [CATEGORIES[0].id],
   },
   {
@@ -51,7 +51,7 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'Producto 5',
     descripcion: 'Descripción del producto 5',
     precio: 0,
-    imagen: 'assets/img/IMG-20250819-WA0055.jpg',
+    imagen: '../../assets/img/IMG-20250819-WA0055.jpg',
     categoriaId: [CATEGORIES[0].id],
   },
   {
@@ -59,7 +59,7 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'Producto 6',
     descripcion: 'Descripción del producto 6',
     precio: 0,
-    imagen: 'assets/img/IMG-20250819-WA0056.jpg',
+    imagen: '../../assets/img/IMG-20250819-WA0056.jpg',
     categoriaId: [CATEGORIES[0].id],
   },
   {
@@ -67,7 +67,7 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'Producto 7',
     descripcion: 'Descripción del producto 7',
     precio: 0,
-    imagen: 'assets/img/IMG-20250819-WA0057.jpg',
+    imagen: '../../assets/img/IMG-20250819-WA0057.jpg',
     categoriaId: [CATEGORIES[0].id],
   },
   {
@@ -75,7 +75,7 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'Producto 8',
     descripcion: 'Descripción del producto 8',
     precio: 0,
-    imagen: 'assets/img/IMG-20250819-WA0058.jpg',
+    imagen: '../../assets/img/IMG-20250819-WA0058.jpg',
     categoriaId: [CATEGORIES[0].id],
   },
   {
@@ -83,7 +83,7 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'Producto 9',
     descripcion: 'Descripción del producto 9',
     precio: 0,
-    imagen: 'assets/img/IMG-20250819-WA0059.jpg',
+    imagen: '../../assets/img/IMG-20250819-WA0059.jpg',
     categoriaId: [CATEGORIES[0].id],
   },
   {
@@ -91,7 +91,7 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'Producto 10',
     descripcion: 'Descripción del producto 10',
     precio: 0,
-    imagen: 'assets/img/IMG-20250819-WA0060.jpg',
+    imagen: '../../assets/img/IMG-20250819-WA0060.jpg',
     categoriaId: [CATEGORIES[0].id],
   },
   {
