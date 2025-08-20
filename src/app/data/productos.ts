@@ -27,7 +27,7 @@ export const PRODUCTOS: Producto[] = [
     nombre: 'Producto 2',
     descripcion: 'Descripción del producto 2',
     precio: 0,
-    imagen: '../../assets/img/IMG-20250819-WA0052.jpg',
+    imagen: 'assets/img/IMG-20250819-WA0052.jpg',
     categoriaId: [CATEGORIES[0].id],
   },
   {
